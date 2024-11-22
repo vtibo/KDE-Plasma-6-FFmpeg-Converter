@@ -1,6 +1,8 @@
 # Note 
-This script was made originaly by NuVanDibe
+This script was originally made by NuVanDibe
 https://github.com/NuVanDibe/dolphin-context-convert
+
+I change some stuff in the ffmpeg encoder and the script path to my taste.
 
 # KDE Plasma FFmpeg Converter
 
