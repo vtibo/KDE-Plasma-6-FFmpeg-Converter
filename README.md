@@ -1,3 +1,7 @@
+# Note 
+This script was made originaly by NuVanDibe
+https://github.com/NuVanDibe/dolphin-context-convert
+
 # KDE Plasma FFmpeg Converter
 
 Right-click to convert audio/video/images in KDE Plasma. Uses FFmpeg. I only deal in KDE rn, feel free to PR for more compatibility
