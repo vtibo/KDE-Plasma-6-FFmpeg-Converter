@@ -12,7 +12,6 @@ if [ "$output_extension" == "alac" ]; then
 else
     output_file="${filename_noext}.${output_extension}"
 fi
-webm=("webm")
 alossy=("mp3" "aac" "ogg" "wma" "m4a")
 alossless=("flac" "alac" "wav" "aiff")
 ilossy=("jpg" "gif" "webp")
@@ -65,6 +64,8 @@ if [[ " $input_format " == " audio " ]] || [[ " $input_format " == " video " ]];
         else
         error_output=$(ffmpeg -i "$input_file" -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -q:a 1 -map a "$output_file" 2>&1) &
         fi
+    elif [ "$output_extension" == "gif" ]; then  # alac is still a special babyboy
+        error_output=$(ffmpeg -i "$input_file" -vf "fps=10,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "$output_file" 2>&1) &
     else
         error_output=$(ffmpeg -i "$input_file" -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -q:a 1 "$output_file" 2>&1) &
     fi

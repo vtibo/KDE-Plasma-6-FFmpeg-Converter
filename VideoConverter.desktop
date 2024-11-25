@@ -2,7 +2,7 @@
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
 MimeType=video/*;
-Actions=ConvertToMP4;ConvertToAVI;ConvertToMOV;ConvertToMKV;ConvertToWMV;ConvertToFLV;ConvertToMPG;ConvertToMP3;ConvertToOGV;ConvertToWebM;
+Actions=ConvertToMP4;ConvertToAVI;ConvertToGIF;ConvertToMOV;ConvertToMKV;ConvertToWMV;ConvertToFLV;ConvertToMPG;ConvertToMP3;ConvertToOGV;ConvertToWebM;
 X-KDE-Submenu=Convert Video
 Icon=video-x-generic
 X-KDE-StartupNotify=false
@@ -15,6 +15,11 @@ Icon=video-mp4
 [Desktop Action ConvertToAVI]
 Name=Convert to AVI
 Exec=~/Apps/ffmpegconvert.sh %U avi video
+Icon=video-x-msvideo
+
+[Desktop Action ConvertToGIF]
+Name=Convert to GIF
+Exec=~/Apps/ffmpegconvert.sh %U gif video
 Icon=video-x-msvideo
 
 [Desktop Action ConvertToMOV]
